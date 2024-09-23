@@ -55,10 +55,12 @@ def skip_num():
 
 
 def lottry():
-    st = int(start.get())
-    en = int(end.get())        #从tk输入框中获取抽号的起始号和结束号，以及抽号个数
-    nu = int(number.get())
-    
+    try:
+        st = int(start.get())
+        en = int(end.get())        #从tk输入框中获取抽号的起始号和结束号，以及抽号个数
+        nu = int(number.get())
+    except:
+        messagebox.showerror("Error", "前三个空一定要填！")
     return st, en, nu
 
 
